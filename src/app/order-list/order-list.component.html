@@ -1,0 +1,8 @@
+<h5>Firebase collection Display</h5>
+<ul>
+  <li *ngFor = "let order of coffeeorders">
+    {{ order.payload.doc.data().orderNumber }}  {{ order.payload.doc.data().customerName }}  {{ order.payload.doc.data().completed }}
+    <button class="waves-effect waves-dark btn" (click)="updateCompleted(order.payload.doc.id)">Update</button>
+    <button class="waves-effect waves-dark btn" (click)="deletedoc(order.payload.doc.id)">Delete</button>
+  </li>
+</ul>
